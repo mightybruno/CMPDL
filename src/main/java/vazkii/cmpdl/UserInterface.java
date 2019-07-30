@@ -43,8 +43,11 @@ class UserInterface {
     }
 
     private static void updateLabel() {
-        if (frame != null)
-            frame.currentStatus.setText(String.format("<html>%s<br>%s</html>", line1, line2));
+        try {
+            if (frame != null)
+                frame.currentStatus.setText(String.format("<html>%s<br>%s</html>", line1, line2));
+        } catch (Exception ex) {
+        }
     }
 
     @SuppressWarnings("deprecation")
